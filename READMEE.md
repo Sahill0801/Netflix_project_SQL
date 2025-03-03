@@ -39,6 +39,29 @@ CREATE TABLE netflix
 );
 ```
 
+-- Data Cleaning
+
+```sql
+SELECT * FROM netflix
+where 
+	show_id	is null or type is null or
+	title is null or director is null or
+	casts is null or country is null or
+	date_added is null or release_year is null or
+	rating is null or duration is null or
+	listed_in is null or description is null ;
+```
+```sql
+DELETE  FROM netflix
+where 
+	show_id	is null or type is null or
+	title is null or director is null or
+	casts is null or country is null or
+	date_added is null or release_year is null or
+	rating is null or duration is null or
+	listed_in is null or description is null ;
+```
+
 ## Business Problems and Solutions
 
 ### 1. Count the Number of Movies vs TV Shows
@@ -265,19 +288,3 @@ GROUP BY category;
 
 This analysis provides a comprehensive view of Netflix's content and can help inform content strategy and decision-making.
 
-
-
-## Author - Zero Analyst
-
-This project is part of my portfolio, showcasing the SQL skills essential for data analyst roles. If you have any questions, feedback, or would like to collaborate, feel free to get in touch!
-
-### Stay Updated and Join the Community
-
-For more content on SQL, data analysis, and other data-related topics, make sure to follow me on social media and join our community:
-
-- **YouTube**: [Subscribe to my channel for tutorials and insights](https://www.youtube.com/@zero_analyst)
-- **Instagram**: [Follow me for daily tips and updates](https://www.instagram.com/zero_analyst/)
-- **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/najirr)
-- **Discord**: [Join our community to learn and grow together](https://discord.gg/36h5f2Z5PK)
-
-Thank you for your support, and I look forward to connecting with you!
